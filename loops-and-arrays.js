@@ -12,6 +12,9 @@
 // ==========================================
 
 const meetingTimes = ['09:00', '10:30', '14:00', '15:30', '17:00'];
+for (let i = 0; i < meetingTimes.length; i++) {
+    console.log("Vergadering om " + meetingTimes[i]);
+}
 
 
 // ==========================================
@@ -26,6 +29,14 @@ const meetingTimes = ['09:00', '10:30', '14:00', '15:30', '17:00'];
 // ==========================================
 
 const salaries = [3200, 2350, 2800, 3500, 2800];
+const salaryRaise = 1.05; //5% salaris verhoging
+
+for (let i = 0; i < salaries.length; i++) {
+    let newSalary = salaries[i] * salaryRaise;
+    salaries[i] * salaryRaise;
+    salaries[i] = newSalary;
+}
+console.log(salaries);
 
 
 // ==========================================
@@ -38,6 +49,13 @@ const salaries = [3200, 2350, 2800, 3500, 2800];
 // ==========================================
 
 const birthYears = [1995, 1997, 1990, 2003, 1982];
+const currentYear = 2025; // Set current year
+
+for (let i = 0; i < birthYears.length; i++) {
+    let calculatedBirthYear = currentYear - birthYears[i];
+    birthYears[i] = calculatedBirthYear; // Takes each age and returns it into the array
+}
+console.log(birthYears);
 
 
 // ==========================================
