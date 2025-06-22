@@ -95,5 +95,11 @@ console.log(leaveHours);
 // ==========================================
 
 const productionCodes = [" abC123  ", "  DEF456", "ghi789  ", "JKL012"];
+for (let i = 0; i < productionCodes.length; i++) {
+    let productionCode = productionCodes[i].toUpperCase().trim(); //Methodes can be combined. I have chosen to do so.
+    // code can be an inline with productionCodes[i] = productionCodes[i].toUpperCase().trim();
+    productionCodes[i] = productionCode;
+}
+console.log(productionCodes);
 
 
