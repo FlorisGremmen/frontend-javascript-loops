@@ -43,6 +43,8 @@ for (let y = 0; y < 5; y++) {
 // 'INV-0006'
 // 'INV-0007'
 // 'INV-0008'
+// ==========================================
+
 const factuurNummer = "INV-000";
 for (let z = 0; z < 8; z++) {
     let volgnummer = z + 1;
@@ -50,16 +52,26 @@ for (let z = 0; z < 8; z++) {
 }
 
 // ==========================================
-
-// ==========================================
 // Opdracht 4. Schrijf een for-loop die van 9 tot en met 18 loopt en de uren logt.
 // - Bij 10:00 en 14:00 moet de tekst "Koffiepauze!" toegevoegd worden
 // - Bij 12:00 moet de tekst "Lunchpauze!" toegevoegd worden
 // - Bij 17:00 moet de tekst "Bijna klaar..." toegevoegd worden
 
+// Verwachte uitkomsten:
+
+// 9:00
+// 10:00
+// 11:00
+// 12:00 Lunchpauze!
+// 13:00
+// 14:00
+// 15:00
+// 16:00
+// 17:00 Bijna klaar...
+// 18:00
+// ==========================================
 const hours = ["09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00"];
 for (let i = 0; i < hours.length; i++) {
-    //console.log(hours[i]);
     switch(hours[i]) {
         case "10:00":
         case "14:00":
@@ -77,20 +89,6 @@ for (let i = 0; i < hours.length; i++) {
     }
 }
 
-// Verwachte uitkomsten:
-// 9:00
-// 10:00
-// 11:00
-// 12:00 Lunchpauze!
-// 13:00
-// 14:00
-// 15:00
-// 16:00
-// 17:00 Bijna klaar...
-// 18:00
-// ==========================================
-
-
 // ==========================================
 // Opdracht 5. Maak een for-loop die van 0 tot 9 loopt en de getallen 0 tot 9 logt.
 // Echter, vanaf het getal 3 komt er een > voor ieder getal te staan, en vanaf het getal 6 komt er >> voor ieder getal te staan.
@@ -107,8 +105,15 @@ for (let i = 0; i < hours.length; i++) {
 // >> 9
 // ==========================================
 
-for (let i = 0; i < 9; i++) {
-    console.log(i);
+for (let i = 0; i < 10; i++) {
+    // console.log(i);
+    if ( i >= 3 && i < 6 ) {
+        console.log(" > " + i);
+    } else if ( i >= 6 ) {
+        console.log(">> " + i);
+    } else {
+        console.log(i);
+    }
 }
 
 // ==========================================
@@ -148,6 +153,17 @@ for (let i = 0; i < 9; i++) {
 // FizzBuzz
 // etc.
 // ==========================================
-
+for (let i = 0; i <= 100; i++) {
+    i + 1; // Set the counter to actual 1
+    if (i % 15 === 0) {
+        console.log("FizzBuzz");
+    } else if (i % 3 === 0) {
+        console.log("Fizz");
+    } else if (i % 5 === 0) {
+        console.log("Buzz");
+    } else {
+        console.log(i);
+    }
+}
 
 
