@@ -9,9 +9,9 @@
 
 // Tip: je kunt de .repeat() methode gebruiken om een karakter een n aantal keer te herhalen... Dit heb je nog niet geleerd, maar bekijk hiervoor dit MDN-artikel eens: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat
 // ==========================================
-for (let x = 1; x < 6; x++) {
+for (let i = 1; i < 6; i++) {
     const star = "*";
-    console.log(star.repeat(x))
+    console.log(star.repeat(i));
 }
 
 // ==========================================
@@ -24,7 +24,7 @@ for (let x = 1; x < 6; x++) {
 // klaar!
 // ==========================================
 for (let y = 0; y < 5; y++) {
-    if (y !== 4) {
+    if (y <= 3) {
         console.log("loop...");
     } else {
         console.log("klaar!");
@@ -57,6 +57,26 @@ for (let z = 0; z < 8; z++) {
 // - Bij 12:00 moet de tekst "Lunchpauze!" toegevoegd worden
 // - Bij 17:00 moet de tekst "Bijna klaar..." toegevoegd worden
 
+const hours = ["09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00"];
+for (let i = 0; i < hours.length; i++) {
+    //console.log(hours[i]);
+    switch(hours[i]) {
+        case "10:00":
+        case "14:00":
+            console.log(hours[i] + " Koffiepauze!");
+            break;
+        case "12:00":
+            console.log(hours[i] + " Lunchpauze!");
+            break;
+        case "17:00":
+            console.log(hours[i] + " Bijna klaar...");
+            break;
+        default:
+            console.log(hours[i]);
+            break;
+    }
+}
+
 // Verwachte uitkomsten:
 // 9:00
 // 10:00
@@ -87,6 +107,9 @@ for (let z = 0; z < 8; z++) {
 // >> 9
 // ==========================================
 
+for (let i = 0; i < 9; i++) {
+    console.log(i);
+}
 
 // ==========================================
 // Opdracht 6 (BONUS). Schrijf een for-loop die van 0 tot 100 loopt en de getallen print.
