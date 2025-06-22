@@ -9,7 +9,10 @@
 
 // Tip: je kunt de .repeat() methode gebruiken om een karakter een n aantal keer te herhalen... Dit heb je nog niet geleerd, maar bekijk hiervoor dit MDN-artikel eens: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat
 // ==========================================
-
+for (let x = 1; x < 6; x++) {
+    const star = "*";
+    console.log(star.repeat(x))
+}
 
 // ==========================================
 // Opdracht 2. Maak een for-loop die 4 keer het woord "loop..." logt, en bij de laatste (vijfde) loop het woord "klaar!"
@@ -20,7 +23,13 @@
 // loop...
 // klaar!
 // ==========================================
-
+for (let y = 0; y < 5; y++) {
+    if (y !== 4) {
+        console.log("loop...");
+    } else {
+        console.log("klaar!");
+    }
+}
 
 // ==========================================
 // Opdracht 3. Maak een for-loop die automatisch factuurnummers genereert in het formaat INV-0001, INV-0002, enzovoorts. Zorg ervoor dat je begint bij nummer 1 en dat de nummers oplopen. Er zijn in totaal 8 factuurnummers nodig.
@@ -34,6 +43,11 @@
 // 'INV-0006'
 // 'INV-0007'
 // 'INV-0008'
+const factuurNummer = "INV-000";
+for (let z = 0; z < 8; z++) {
+    let volgnummer = z + 1;
+    console.log(factuurNummer + volgnummer);
+}
 
 // ==========================================
 
