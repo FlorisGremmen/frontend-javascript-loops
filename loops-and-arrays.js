@@ -33,9 +33,9 @@ const salaryRaise = 1.05; //5% salaris verhoging
 
 for (let i = 0; i < salaries.length; i++) {
     salaries[i] = salaries[i] * salaryRaise;
-/*    let newSalary;
-    newSalary = salaries[i] * salaryRaise;
-    salaries[i] = newSalary; */
+    /*    let newSalary;
+        newSalary = salaries[i] * salaryRaise;
+        salaries[i] = newSalary; */
 }
 console.log(salaries);
 
@@ -95,7 +95,7 @@ console.log(leaveHours);
 
 const productionCodes = [" abC123  ", "  DEF456", "ghi789  ", "JKL012"];
 for (let i = 0; i < productionCodes.length; i++) {
-     //Methodes can be combined. I have chosen to do so.
+    //Methodes can be combined. I have chosen to do so.
     productionCodes[i] = productionCodes[i].toUpperCase().trim();
 }
 console.log(productionCodes);
