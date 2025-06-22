@@ -32,9 +32,10 @@ const salaries = [3200, 2350, 2800, 3500, 2800];
 const salaryRaise = 1.05; //5% salaris verhoging
 
 for (let i = 0; i < salaries.length; i++) {
-    let newSalary = salaries[i] * salaryRaise;
-    salaries[i] * salaryRaise;
-    salaries[i] = newSalary;
+    salaries[i] = salaries[i] * salaryRaise;
+/*    let newSalary;
+    newSalary = salaries[i] * salaryRaise;
+    salaries[i] = newSalary; */
 }
 console.log(salaries);
 
@@ -52,8 +53,7 @@ const birthYears = [1995, 1997, 1990, 2003, 1982];
 const currentYear = 2025; // Set current year
 
 for (let i = 0; i < birthYears.length; i++) {
-    let calculatedBirthYear = currentYear - birthYears[i];
-    birthYears[i] = calculatedBirthYear; // Takes each age and returns it into the array
+    birthYears[i] = currentYear - birthYears[i];
 }
 console.log(birthYears);
 
@@ -70,12 +70,11 @@ console.log(birthYears);
 
 const leaveHours = [6, 9, 2, 7, 3];
 for (let i = 0; i < leaveHours.length; i++) {
+    //Check if number is even to multiply with 2 otherwise multiply with 0.5
     if (leaveHours[i] % 2 === 0) {
-        let positiveLeaveHour = leaveHours[i] * 2; //It can be shortend to leaveHours[i] = leaveHours[i] * 2;
-        leaveHours[i] = positiveLeaveHour;
+        leaveHours[i] = leaveHours[i] * 2;
     } else {
-        let negativeLeaveHour = leaveHours[i] * 0.5; // See comment line 74
-        leaveHours[i] = negativeLeaveHour;
+        leaveHours[i] = leaveHours[i] * 0.5;
     }
 }
 console.log(leaveHours);
@@ -96,10 +95,7 @@ console.log(leaveHours);
 
 const productionCodes = [" abC123  ", "  DEF456", "ghi789  ", "JKL012"];
 for (let i = 0; i < productionCodes.length; i++) {
-    let productionCode = productionCodes[i].toUpperCase().trim(); //Methodes can be combined. I have chosen to do so.
-    // code can be an inline with productionCodes[i] = productionCodes[i].toUpperCase().trim();
-    productionCodes[i] = productionCode;
+     //Methodes can be combined. I have chosen to do so.
+    productionCodes[i] = productionCodes[i].toUpperCase().trim();
 }
 console.log(productionCodes);
-
-
