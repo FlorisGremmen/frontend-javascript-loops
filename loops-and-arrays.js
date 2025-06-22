@@ -69,7 +69,16 @@ console.log(birthYears);
 // ==========================================
 
 const leaveHours = [6, 9, 2, 7, 3];
-
+for (let i = 0; i < leaveHours.length; i++) {
+    if (leaveHours[i] % 2 === 0) {
+        let positiveLeaveHour = leaveHours[i] * 2; //It can be shortend to leaveHours[i] = leaveHours[i] * 2;
+        leaveHours[i] = positiveLeaveHour;
+    } else {
+        let negativeLeaveHour = leaveHours[i] * 0.5; // See comment line 74
+        leaveHours[i] = negativeLeaveHour;
+    }
+}
+console.log(leaveHours);
 
 // ==========================================
 // Opdracht 5 (BONUS). Na een dag bij Loop-it Solutions zit je er lekker in, tot je beseft dat één van de machines de
