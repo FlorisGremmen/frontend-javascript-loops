@@ -103,45 +103,30 @@ const scores = [{name: 'Max', score: 83, salaryIncrease: null}, {
 for (let i = 0; i < scores.length; i++) {
     const salaryIncreasements = ["0%", "2%", "3%", "4%", "6%"];
     let score = scores[i].score;
-    if (score < 60) {
-        scores[i].salaryIncrease = salaryIncreasements[0];
-        console.log("0%");
-    } else if (score >= 60 && score <= 69) {
-        scores[i].salaryIncrease = salaryIncreasements[1];
-        console.log("2%")
-    } else if (score >= 70 && score <= 89) {
-        scores[i].salaryIncrease = salaryIncreasements[2];
-        console.log(`3%`);
-    } else if (score >= 90 && score <= 99) {
-        scores[i].salaryIncrease = salaryIncreasements[3];
-        console.log("4%")
-    } else if (score = 100) {
-        scores[i].salaryIncrease = salaryIncreasements[4];
-        console.log("6%");
-    } else {
-        console.log(`No value found for ${score}`);
-    }
-    /* Switch statement that does not work */
-    /*
-    switch (score) {
+    // Only the switch statement. Found the issue where switch in Javascript only returns a true/false boolean.
+    switch (true) {
         case score < 60:
-            console.log("0%");
+            scores[i].salaryIncrease = salaryIncreasements[0];
+            console.log(salaryIncreasements[0]);
             break;
         case score >= 60 && score <= 69:
-            console.log("2%");
+            scores[i].salaryIncrease = salaryIncreasements[1];
+            console.log(salaryIncreasements[1]);
             break;
         case score >= 70 && score <= 89:
-            console.log("3%");
+            scores[i].salaryIncrease = salaryIncreasements[2];
+            console.log(salaryIncreasements[2]);
             break;
         case score >= 90 && score <= 99:
-            console.log("4%");
+            scores[i].salaryIncrease = salaryIncreasements[3];
+            console.log(salaryIncreasements[3]);
             break;
-        case score = 100:
-            console.log("6%")
+        case score === 100:
+            scores[i].salaryIncrease = salaryIncreasements[4];
+            console.log(salaryIncreasements[4])
             break;
-    }
-    */
 
+    }
 }
 
 // ==========================================
