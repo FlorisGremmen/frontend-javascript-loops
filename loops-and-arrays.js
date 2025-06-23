@@ -12,6 +12,9 @@
 // ==========================================
 
 const meetingTimes = ['09:00', '10:30', '14:00', '15:30', '17:00'];
+for (let i = 0; i < meetingTimes.length; i++) {
+    console.log("Vergadering om " + meetingTimes[i]);
+}
 
 
 // ==========================================
@@ -26,6 +29,15 @@ const meetingTimes = ['09:00', '10:30', '14:00', '15:30', '17:00'];
 // ==========================================
 
 const salaries = [3200, 2350, 2800, 3500, 2800];
+const salaryRaise = 1.05; //5% salaris verhoging
+
+for (let i = 0; i < salaries.length; i++) {
+    salaries[i] = salaries[i] * salaryRaise;
+    /*    let newSalary;
+        newSalary = salaries[i] * salaryRaise;
+        salaries[i] = newSalary; */
+}
+console.log(salaries);
 
 
 // ==========================================
@@ -38,6 +50,12 @@ const salaries = [3200, 2350, 2800, 3500, 2800];
 // ==========================================
 
 const birthYears = [1995, 1997, 1990, 2003, 1982];
+const currentYear = 2025; // Set current year
+
+for (let i = 0; i < birthYears.length; i++) {
+    birthYears[i] = currentYear - birthYears[i];
+}
+console.log(birthYears);
 
 
 // ==========================================
@@ -51,7 +69,15 @@ const birthYears = [1995, 1997, 1990, 2003, 1982];
 // ==========================================
 
 const leaveHours = [6, 9, 2, 7, 3];
-
+for (let i = 0; i < leaveHours.length; i++) {
+    //Check if number is even to multiply with 2 otherwise multiply with 0.5
+    if (leaveHours[i] % 2 === 0) {
+        leaveHours[i] = leaveHours[i] * 2;
+    } else {
+        leaveHours[i] = leaveHours[i] * 0.5;
+    }
+}
+console.log(leaveHours);
 
 // ==========================================
 // Opdracht 5 (BONUS). Na een dag bij Loop-it Solutions zit je er lekker in, tot je beseft dat één van de machines de
@@ -68,5 +94,8 @@ const leaveHours = [6, 9, 2, 7, 3];
 // ==========================================
 
 const productionCodes = [" abC123  ", "  DEF456", "ghi789  ", "JKL012"];
-
-
+for (let i = 0; i < productionCodes.length; i++) {
+    //Methodes can be combined. I have chosen to do so.
+    productionCodes[i] = productionCodes[i].toUpperCase().trim();
+}
+console.log(productionCodes);
