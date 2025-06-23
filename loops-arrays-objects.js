@@ -101,32 +101,26 @@ const scores = [{name: 'Max', score: 83, salaryIncrease: null}, {
     salaryIncrease: null
 },];
 for (let i = 0; i < scores.length; i++) {
+    scores[i].salaryIncrease = setSalaryIncreasePercentage(scores[i]);
+}
+
+function setSalaryIncreasePercentage (object) {
     const salaryIncreasements = ["0%", "2%", "3%", "4%", "6%"];
-    let score = scores[i].score;
-    // Only the switch statement. Found the issue where switch in Javascript only returns a true/false boolean.
+    let score = object.score;
+
     switch (true) {
         case score < 60:
-            scores[i].salaryIncrease = salaryIncreasements[0];
-            console.log(salaryIncreasements[0]);
-            break;
+            return salaryIncreasements[0];
         case score >= 60 && score <= 69:
-            scores[i].salaryIncrease = salaryIncreasements[1];
-            console.log(salaryIncreasements[1]);
-            break;
+            return salaryIncreasements[1];
         case score >= 70 && score <= 89:
-            scores[i].salaryIncrease = salaryIncreasements[2];
-            console.log(salaryIncreasements[2]);
-            break;
+            return salaryIncreasements[2];
         case score >= 90 && score <= 99:
-            scores[i].salaryIncrease = salaryIncreasements[3];
-            console.log(salaryIncreasements[3]);
-            break;
+            return salaryIncreasements[3];
         case score === 100:
-            scores[i].salaryIncrease = salaryIncreasements[4];
-            console.log(salaryIncreasements[4])
-            break;
-
+            return salaryIncreasements[4];
     }
+    return score;
 }
 
 // ==========================================
